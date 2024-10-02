@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #642b62;
+}
+
+nav {
+    background-color: #fff8ed;
+    font-weight: bold;
+    position: fixed;
+    height: 7vh;
+    width: 100%;
+    top: 0;
+}
+
+nav li {
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav li a {
+    color: #4d4c56;
+    float: right;
+    text-decoration: none;
+    margin-right: 30px;
+    margin-top: -5px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #536a87;
+}
+
+.home {
+    height: 100vh;
+    background-image: url("../assets/rahatali.jpg"), url("../assets/overlay.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+    align-content: center;
+    justify-content: center;
+}
+
+.home .border {
+    border: 30px solid transparent;
+    border-image: url("../assets/border.svg") 10 stretch;
+    padding: 70px;
+    text-align: center;
+    color: white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.border h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-stretch: ultra-condensed;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.border h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-stretch: ultra-condensed;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+@font-face {
+    font-family: edwardianscriptitc;
+    src: url("../assets/edwardianscriptitc.ttf");
+}
+
+.border h1 {
+    font-family: edwardianscriptitc;
+    font-size: 17vh;
+    font-weight: lighter;
+    margin: -20px;
+    padding: -20px;
+}
