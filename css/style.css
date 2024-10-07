@@ -1,18 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #fff8ed;
     color: #642b62;
 }
 
+
+/* Nav */
+
+
 nav {
-    background-color: #fff8ed;
     font-weight: bold;
+    background-color: #fff8ed;
     position: fixed;
-    height: 7vh;
+    height: 50px;
     width: 100%;
     top: 0;
     box-shadow: 0 0 1px #642b62;
+    z-index: 10;
 }
 
 nav li {
@@ -24,42 +29,40 @@ nav li a {
     color: #4d4c56;
     float: right;
     text-decoration: none;
-    margin-right: 30px;
-    margin-top: -5px;
     font-size: 16px;
+    padding-top: 1px;
+    margin-right: 27px;
+    margin-top: -6px;
 }
 
 nav a:hover {
     color: #536a87;
 }
 
+
+/* Home */
+
+
 .home {
-    height: 100vh;
-    background-image: url("../assets/home.jpg");
+    height: fit-content;
+    background-image: url("../assets/rahatali.jpg"), url("../assets/overlay.png");
+    background-blend-mode: multiply;
     background-size: cover;
+    background-position: center;
     align-content: center;
     justify-content: center;
+    text-align: center;
 }
 
 .home .border {
     border: 30px solid transparent;
     border-image: url("../assets/border.svg") 10 stretch;
-    text-align: center;
     color: white;
-    margin: 10%;
-    padding: 10%;
-    height: fit-content;
+    margin: 5%;
+    margin-left: 16%;
+    margin-right: 16%;
+    padding: 7%;
 }
-
-.border h3 {
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-stretch: ultra-condensed;
-    font-size: 2.3vh;
-    margin: 0;
-    padding: 0;
-}
-
 
 @font-face {
     font-family: edwardianscriptitc;
@@ -67,27 +70,40 @@ nav a:hover {
 }
 
 .border h1 {
+    white-space: nowrap;
     font-family: edwardianscriptitc;
-    width: fit-content;
     font-weight: lighter;
-    margin: 0;
+    font-size: 10vw;
+    margin: -27px;
 }
-
 
 .border h2 {
     font-family: "Playfair Display", serif;
     font-weight: 500;
-    font-size: 2.5vw;
-    width: 100%; 
-    text-align: center;
-    margin: 0;
+    font-size: 2em;
+    display: flex;
+    white-space: nowrap;
+    margin: 0 13% 0 13%;
 }
 
-.border h1:before, .border h1:after {
-    padding:2.2vh 4vw;
-    content: " ";
-    border-bottom: 1px solid #ffffff; 
-} 
+.border h2:before, .border h2:after {
+    content: "";
+    font-family: 'Franklin Gothic Medium';
+    font-weight: lighter;
+    border-top: 1px solid #ffffff; 
+    flex: 1;
+    margin: 23px;
+
+}
+
+.border h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-stretch: ultra-condensed;
+    font-size: 2.5vh;
+    white-space: nowrap;
+    margin: -3%;
+}
 
 .border .button {
     background-color: #b093a8;
@@ -95,91 +111,166 @@ nav a:hover {
     text-transform: uppercase;
     padding: 16px;
     letter-spacing: 3px;
-    margin-top: 30px;
+    margin-top: 50px;
     font-family: Verdana;
+    font-size: 15px;
 }
 
+
+/* About */
+
+
+
 .about {
-    height: 110vh;
+    height: fit-content;
     background-color: #642b62;
     color: #fff8ed;
     align-content: center;
     text-align: center;
     line-height: 1;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    height: fit-content;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
 
 .about img {
-    width: 15vw;
-    padding: 5px;
+    display: inline-block;
+    padding: 1vw;
+    flex: 1;
+    width: 10%;
+}
+
+.about #mansion {
+    width: 15%;
 }
 
 .about h1 {
     font-weight: lighter;
-    font-size: 250%;
+    font-size: 365%;
     padding: 20px;
+    margin: 0 25% 0 25%;
 }
 
 .about p {
     font-family: verdana;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: lighter;
+    margin: 0;
+    padding: 5px;
 }
+
+
+
+/* Villas */
+
+
 
 .villas {
     background-color: #fff8ed;
     text-align: center;
     position: relative;
-    margin: 0;
-    padding: 30px;
+    padding-top: 2%;
+}
+
+.villas div {
+    display: inline-block;
+    margin: 0 -80px 0 -80px;
 }
 
 .villas h2 {
-    font-size: 6vh;
+    font-size: 60px;
     font-family: Cambria;
-    font-weight: lighter;
+    font-weight: 500;
     text-align: center;
 }
 
 .villas h3, .villas h4, .villas p {
     font-family: verdana;
+    margin: 9px;
 }
+
+.villas h3 {
+    font-size: 25px;
+} 
 
 .villas img {
-    width: 300px;
-    clip-path: inset(0 70px 0px 70px round 200px 200px 0 0)
+    height: 400px;
+    grid-column: 3;
+    clip-path: inset(0 145px 0 145px round 600px 600px 0 0);
 }
 
+
+/* Garden */
+
 .garden {
-    padding-top: 50px;
+    display: flex;
+    flex: 1;
     background-color: #fff8ed;
+    height: fit-content;
+    padding: 10%;
+}
+
+.garden .text {
+    justify-content: center;
+    text-align: center;
 }
 
 .garden h1 {
-    font-size: 10vh;
-    text-align: center;
-    border-bottom: 1px solid #7b2543;
+    padding-top: 15%;
+    font-size: 65px;
     font-weight: lighter;
     color: #7b2543;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .garden p {
-    font-size: 15px;
-    text-align: center;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 1ighter;
     color: #7b2543;
+    line-height: 1.5;
+    padding-top: 30px;
+    border-top: 1px solid #7b2543;
 }
 
+.garden img {
+    height: 70vh;
+    clip-path: inset(0 10% 0 10%);
+}
+
+/* Purple */
+
 .purple {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
     background-color: #b093a8;
     color: #fff8ed;
 }
 
+.purple p {
+    font-family: verdana;
+}
+
+.purple .left img {
+    height: 100vh;
+    clip-path: inset(40% 0 0 20%);
+}
+.purple .right img {
+    height: 80vh;
+    clip-path: inset(30% 30% 0 30%);
+}
+
+
+
+/* Offers */
+
 .offers {
+    position: relative;
     background-color: #fff8ed;
     align-content: center;
     text-align: center;
-    padding: 15vw;
 }
 
 .offers img {
@@ -202,12 +293,18 @@ nav a:hover {
     font-family: Verdana;
 }
 
+
+/* Test. */
+
 .test {
     background-color: #642b62;
     color: #fff8ed;
     height: fit-content;
     padding: 10%;
-    height: 110vh;
+    height: fit-content;
+    font-size: 40px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .test h1 {
@@ -217,7 +314,7 @@ nav a:hover {
 
 .test blockquote {
     font-family: verdana;
-    font-size: 11px;
+    font-size:20px;
     border-top: 1px solid #fff8ed;
     padding: 10px;
 }
@@ -226,45 +323,59 @@ nav a:hover {
     font-family: edwardianscriptitc;
 }
 
+/* Contact */
+
 #red-wine {
     width: 100vw;
+    height: 70vh;
     object-fit: cover;
     position: absolute;
-    z-index: -7;
+    z-index: -2;
   }
   
 .contact {
+
     height: 110vh;
 }
 
 .content h3 {
-        font-family: edwardianscriptitc;
+    font-family: edwardianscriptitc;
+
 }
 
+.content img {
+    height: 50px;
+}
 
 .content {
     color: #fff8ed;
     padding: 20px;
   }
+
+/* Test. */
   
 footer {
     display: inline;
     float: right;
-    position: relative;
+    position: static;
     background-color: black;
     height: 6vh;
     color: #ffffff;
-    width: 100vw;
+    width: 100%;
+    right: 0;
     bottom: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   footer h2 {
         font-family: edwardianscriptitc;
+        display: inline;
   }
 
+
+
   footer div {
-    display: flex;
+    display: inline;
     float: right;
   }
 
